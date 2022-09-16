@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git remote add ref git@github.com:CS429-F2022/AE-Lab.git
+git remote add ref git@github.com:CS429-F2022/AE-Lab-2.git
 git config pull.rebase false
 git pull --allow-unrelated-histories --set-upstream ref main --no-commit -X theirs
 git commit -m "pulled weekly checkpoint"
