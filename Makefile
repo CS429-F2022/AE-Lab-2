@@ -17,7 +17,7 @@ MD = gccmakedep
 
 # Targets
 
-all: tidy depend ae clean
+all: tidy ae clean
 
 ae: 
 	(cd src && make $@)
