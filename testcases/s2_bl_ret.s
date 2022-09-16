@@ -4,15 +4,17 @@
     .global start
     .type   start, %function
 start:
-    movk x1, #117
-    b .L1
-    movk x1, #118
+    movk x1, #7
+    eor x2, x2, x2
+    adds x29, x30, x2 // Jank way of storing return address
+    bl foo
+    movk x1, #9
     eor x5, x5, x5
     mvn x5, x5
     stur x1, [x5]
-    ret
+    ret x29
 
-.L1:
+foo:
     eor x5, x5, x5
     mvn x5, x5
     stur x1, [x5]
